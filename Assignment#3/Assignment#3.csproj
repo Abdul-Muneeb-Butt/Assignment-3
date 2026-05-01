@@ -7,8 +7,4 @@
     <RootNamespace>Assignment_3</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\assets\images\" />
-  </ItemGroup>
-
 </Project>
