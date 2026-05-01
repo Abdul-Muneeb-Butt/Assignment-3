@@ -497,3 +497,33 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: var(--text-dark);
 }
+#featured {
+    background: var(--yellow);
+    padding: 20px 0 54px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.featured-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.featured-logos-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px;
+}
+
+.flogo-item {
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+    transition: var(--transition);
+}
+
+    .flogo-item:hover {
+        opacity: 1;
+    }
