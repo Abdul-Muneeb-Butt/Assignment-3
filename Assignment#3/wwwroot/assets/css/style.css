@@ -527,3 +527,56 @@ h1, h2, h3, h4, h5, h6 {
     .flogo-item:hover {
         opacity: 1;
     }
+#about {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.about-title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+}
+
+.about-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 28px;
+    max-width: 420px;
+}
+
+.about-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.about-img-wrap {
+    border: 4px solid var(--yellow);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #e8e0ff 0%, #ffe8c8 100%);
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 40px;
+}
+
+    .about-img-placeholder p {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-align: center;
+    }
