@@ -410,3 +410,27 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: var(--font);
 }
+.app-menu-list { padding: 2px 0 4px; background: #fff; }
+.app-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    border-bottom: 1px solid #f0f0f8;
+}
+.app-menu-item:last-child { border-bottom: none; }
+.ami-icon  { font-size: 0.8rem; color: var(--text-muted); width: 18px; flex-shrink: 0; }
+.ami-label { font-size: 0.72rem; font-weight: 500; color: var(--text-dark); flex: 1; font-family: var(--font); }
+.ami-arrow { font-size: 0.6rem; color: #ccc; flex-shrink: 0; }
+.hero-yellow-strip {
+    background: var(--yellow);
+    padding: 44px 0 24px;
+}
+
+.testi-heading {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+}
