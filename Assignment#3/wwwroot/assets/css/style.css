@@ -658,3 +658,81 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid var(--gray-border);
     background: var(--white);
 }
+#company {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.company-card {
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    height: 100%;
+    transition: var(--transition);
+}
+
+    .company-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+    }
+
+.cc-yellow {
+    background: var(--yellow);
+}
+
+.cc-white {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+}
+
+.cc-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.cc-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.btn-cc-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--dark);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 11px 22px;
+    border-radius: var(--radius-pill);
+    transition: var(--transition);
+}
+
+    .btn-cc-dark:hover {
+        background: var(--dark-navy);
+        color: var(--white);
+        transform: translateY(-2px);
+    }
+
+.btn-cc-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: transparent;
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--gray-border);
+    transition: var(--transition);
+}
+
+    .btn-cc-outline:hover {
+        border-color: var(--text-dark);
+        transform: translateY(-2px);
+    }
+ 
