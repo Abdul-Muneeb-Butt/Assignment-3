@@ -1,4 +1,12 @@
-﻿:root {
+﻿/* ============================================================
+   CERTO — style.css
+   Matches screenshots exactly:
+   • Hero: phone INSIDE orange box, purple border frame visible
+   • Features: light blue-gray bg, white rounded card, grid borders
+   ============================================================ */
+
+/* ---- CSS VARIABLES ---- */
+:root {
     --yellow: #F5C518;
     --yellow-dark: #e0b010;
     --orange-hero: #e07800; /* exact orange from Image 1 & 2 */
@@ -24,6 +32,8 @@
     --shadow-lg: 0 24px 64px rgba(0,0,0,0.24);
     --transition: all 0.25s ease;
 }
+
+/* ---- RESET ---- */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -66,6 +76,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.15;
     color: var(--text-dark);
 }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 .btn-yellow {
     display: inline-flex;
     align-items: center;
@@ -87,6 +101,7 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(245,197,24,0.45);
     }
+
 .btn-outline-pill {
     display: inline-flex;
     align-items: center;
@@ -106,6 +121,10 @@ h1, h2, h3, h4, h5, h6 {
         border-color: var(--text-dark);
         transform: translateY(-2px);
     }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
 #header {
     position: sticky;
     top: 0;
@@ -113,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--white);
     border-bottom: 1px solid var(--gray-border);
 }
+
 #mainNav {
     padding: 14px 0;
 }
@@ -158,6 +178,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.65rem;
     margin-left: 2px;
 }
+
 .nav-dropdown-box {
     position: absolute;
     top: calc(100% + 6px);
@@ -223,6 +244,23 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f0d1e' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+/* ============================================================
+   HERO SECTION
+   ============================================================
+   From screenshots:
+   ┌────────────────────────────────────────────────────────┐
+   │  [Left: light gray bg]    │  [Right: solid ORANGE bg] │
+   │                           │  ┌──────────────────────┐ │
+   │  "Your mobile privacy     │  │ purple border frame  │ │
+   │   is our mission"         │  │   ┌──────────┐       │ │
+   │                           │  │   │  PHONE   │       │ │
+   │  body text                │  │   │  MOCKUP  │       │ │
+   │                           │  │   └──────────┘       │ │
+   │  [btn] [btn]              │  └──────────────────────┘ │
+   └────────────────────────────────────────────────────────┘
+   Phone is INSIDE the purple frame, which is INSIDE the orange panel.
+   ============================================================ */
 #hero {
     background: var(--white);
     overflow: hidden;
@@ -253,6 +291,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
     letter-spacing: -1px;
 }
+
 .hero-desc {
     font-size: 0.93rem;
     color: var(--text-muted);
@@ -270,18 +309,30 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── RIGHT COLUMN: solid orange bg ── */
 .hero-right-col {
-     flex: 0 0 56%;
-    background-image: url('../images/hero-bg.jpg');
+    flex: 0 0 56%;
+    /* solid orange — Image 1 exact colour */
+    /* ADD THESE 3 LINES: */
+    background-image: url('../images/im1.PNG'); /* your image path here */
     background-size: cover;
     background-position: center;
-    background-blend-mode: multiply;
+    background-blend-mode: multiply; /* blends orange color over the photo */
+
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 32px 40px;
-    overflow: hidden;   
 }
+
+/* ── PURPLE BORDER FRAME (visible box from screenshot) ── */
+/*
+   Image 1 shows:
+   • A purple/blue rectangle border
+   • Top-left corner starts ~20px from top of orange area
+   • Left edge is ~25px from left of orange area
+   • Right & bottom edges touch or near the orange panel edges
+   Phone sits centred inside this frame.
+*/
 .hero-orange-panel {
     width: 100%;
     height: 100%;
@@ -294,18 +345,18 @@ h1, h2, h3, h4, h5, h6 {
 .hero-purple-frame {
     /* Inset from the orange panel edges — matches screenshot */
     position: absolute;
-    top: 20px;
-    left: 28px;
-    right: 0;
-    bottom: 0;
-    border: 3.5px solid var(--purple-frame);
-    border-right: none; /* clips at right edge of viewport */
-    border-radius: 10px 0 0 10px;
+    top: 24px;
+    left: 24px;
+    right: -60px;
+    bottom: -60px;
+    border: none; /* REMOVE border */
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* phone left-aligned inside frame */
+    justify-content: flex-start;
     padding-left: 36px; /* gap from purple border to phone */
 }
+
+/* ── PHONE MOCKUP ── */
 .hero-phone {
     /* Phone position: left-of-centre inside the orange panel */
     position: relative;
@@ -410,7 +461,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: var(--font);
 }
-.app-menu-list { padding: 2px 0 4px; background: #fff; }
+
+/* Menu rows */
+.app-menu-list {
+    padding: 2px 0 4px;
+    background: #fff;
+}
+
 .app-menu-item {
     display: flex;
     align-items: center;
@@ -418,10 +475,33 @@ h1, h2, h3, h4, h5, h6 {
     padding: 9px 14px;
     border-bottom: 1px solid #f0f0f8;
 }
-.app-menu-item:last-child { border-bottom: none; }
-.ami-icon  { font-size: 0.8rem; color: var(--text-muted); width: 18px; flex-shrink: 0; }
-.ami-label { font-size: 0.72rem; font-weight: 500; color: var(--text-dark); flex: 1; font-family: var(--font); }
-.ami-arrow { font-size: 0.6rem; color: #ccc; flex-shrink: 0; }
+
+    .app-menu-item:last-child {
+        border-bottom: none;
+    }
+
+.ami-icon {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    width: 18px;
+    flex-shrink: 0;
+}
+
+.ami-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    flex: 1;
+    font-family: var(--font);
+}
+
+.ami-arrow {
+    font-size: 0.6rem;
+    color: #ccc;
+    flex-shrink: 0;
+}
+
+/* ── YELLOW STRIP ── */
 .hero-yellow-strip {
     background: var(--yellow);
     padding: 44px 0 24px;
@@ -434,6 +514,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     letter-spacing: -0.3px;
 }
+
+/* ============================================================
+   TESTIMONIALS — horizontal scroll
+   ============================================================ */
 #testimonials {
     background: var(--yellow);
     padding: 0 0 54px;
@@ -497,6 +581,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: var(--text-dark);
 }
+
+/* ============================================================
+   FEATURED IN
+   ============================================================ */
 #featured {
     background: var(--yellow);
     padding: 20px 0 54px;
@@ -527,6 +615,10 @@ h1, h2, h3, h4, h5, h6 {
     .flogo-item:hover {
         opacity: 1;
     }
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
 #about {
     padding: 80px 0;
     background: var(--white);
@@ -580,6 +672,16 @@ h1, h2, h3, h4, h5, h6 {
         color: var(--text-muted);
         text-align: center;
     }
+
+/* ============================================================
+   FEATURES SECTION — matches Image 3 EXACTLY
+   ============================================================
+   Image 3 shows:
+   • Page bg = light blue-gray (#eef0f8)
+   • White rounded card with internal grid lines
+   • 3×2 feature grid, each cell has icon (top centre) + title + desc
+   • Bottom of card: yellow + outline CTA buttons
+   ============================================================ */
 #products {
     background: var(--gray-features); /* light blue-gray — Image 3 */
     padding: 80px 0;
@@ -658,6 +760,10 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid var(--gray-border);
     background: var(--white);
 }
+
+/* ============================================================
+   COMPANY CARDS
+   ============================================================ */
 #company {
     padding: 60px 0;
     background: var(--white);
@@ -735,6 +841,10 @@ h1, h2, h3, h4, h5, h6 {
         border-color: var(--text-dark);
         transform: translateY(-2px);
     }
+
+/* ============================================================
+   CTA PURPLE BANNER
+   ============================================================ */
 #cta {
     padding: 0;
 }
@@ -810,6 +920,10 @@ h1, h2, h3, h4, h5, h6 {
         background: rgba(255,255,255,0.1);
         transform: translateY(-2px);
     }
+
+/* ============================================================
+   BLOG / INSIGHTS
+   ============================================================ */
 #blog {
     background: var(--gray-blog);
     padding: 80px 0;
@@ -927,6 +1041,10 @@ h1, h2, h3, h4, h5, h6 {
     .blog-link:hover {
         gap: 8px;
     }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 #footer {
     background: var(--dark-navy);
     color: var(--text-white70);
@@ -1106,6 +1224,10 @@ h1, h2, h3, h4, h5, h6 {
         color: rgba(255,255,255,0.22);
         line-height: 1.6;
     }
+
+/* ============================================================
+   RESPONSIVE — TABLET ≤991px
+   ============================================================ */
 @media (max-width: 991px) {
 
     /* Stack hero left/right vertically */
@@ -1315,4 +1437,3 @@ h1, h2, h3, h4, h5, h6 {
         padding: 11px 18px;
     }
 }
- 

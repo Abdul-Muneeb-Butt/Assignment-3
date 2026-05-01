@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Certo - iPhone &amp; Android Spyware Detection</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+    <!-- ===== NAVBAR START ===== -->
     <header id="header">
         <nav class="navbar navbar-expand-lg" id="mainNav">
             <div class="container">
@@ -21,11 +26,13 @@
                     </div>
                     <span class="brand-name">Certo</span>
                 </a>
+
                 <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto align-items-lg-center">
                         <li class="nav-item"><a class="nav-link" href="#hero">iPhone</a></li>
@@ -47,7 +54,19 @@
             </div>
         </nav>
     </header>
+    <!-- ===== NAVBAR END ===== -->
+
     <main>
+
+        <!-- ===== HERO SECTION START ===== -->
+        <!--
+            EXACT LAYOUT from screenshots:
+            • Full section = light gray-blue background (var(--gray-hero))
+            • Left ~46%    = white/transparent, headline + desc + buttons
+            • Right ~54%   = ORANGE background panel with purple border box
+                             Phone mockup sits INSIDE the orange panel (centred)
+                             The phone does NOT overlap the left text area
+        -->
         <section id="hero">
             <div class="hero-section-wrap">
 
@@ -67,25 +86,47 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- RIGHT: orange panel + purple border + phone INSIDE the box -->
                 <div class="hero-right-col">
+
+                    <!--
+                        ORANGE PANEL: solid orange background (#e07800)
+                        Purple border box is rendered as inner div (not ::before)
+                        so phone sits cleanly INSIDE the bordered region
+                    -->
                     <div class="hero-orange-panel">
+
+                        <!-- Purple border frame — phone sits inside this -->
                         <div class="hero-purple-frame">
+
+                            <!-- Phone mockup — centred inside the frame -->
                             <div class="hero-phone">
                                 <div class="phone-shell">
+
+                                    <!-- Notch -->
                                     <div class="phone-notch-bar">
                                         <div class="phone-notch-pill"></div>
                                     </div>
+
+                                    <!-- Screen -->
                                     <div class="phone-screen-inner">
+
+                                        <!-- Dark app header -->
                                         <div class="app-topbar">
                                             <span class="app-topbar-title">Dashboard</span>
                                             <span class="app-topbar-dot"></span>
                                         </div>
+
+                                        <!-- Yellow scan circle + date -->
                                         <div class="app-scan-zone">
                                             <div class="app-scan-ring">
                                                 <div class="app-scan-btn">Scan</div>
                                             </div>
                                             <p class="app-scan-date">Last Scan: 02/02/2024</p>
                                         </div>
+
+                                        <!-- Menu rows -->
                                         <ul class="app-menu-list">
                                             <li class="app-menu-item">
                                                 <span class="ami-icon"><i class="bi bi-shield-check"></i></span>
@@ -113,16 +154,18 @@
                                                 <i class="bi bi-chevron-right ami-arrow"></i>
                                             </li>
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
+                                    </div><!-- /phone-screen-inner -->
+                                </div><!-- /phone-shell -->
+                            </div><!-- /hero-phone -->
 
-                </div>
+                        </div><!-- /hero-purple-frame -->
+                    </div><!-- /hero-orange-panel -->
 
-            </div>
+                </div><!-- /hero-right-col -->
+
+            </div><!-- /hero-section-wrap -->
+            <!-- Yellow strip with "Loved by…" heading -->
             <div class="hero-yellow-strip">
                 <div class="container">
                     <h2 class="testi-heading">
@@ -132,44 +175,48 @@
             </div>
 
         </section>
+        <!-- ===== HERO SECTION END ===== -->
+        <!-- ===== TESTIMONIALS START ===== -->
         <section id="testimonials">
             <div class="testi-scroll-outer">
                 <div class="testi-scroll-track">
-                    <div class="testi-card">
-                    <div class="testi-stars">★★★★★</div>
-                    <p>"Does exactly what it says. Clear to read and understand. This is now the second iPhone we've used it on and would certainly recommend this app."</p>
-                    <div class="testi-author">colinandmandy94</div>
-                </div>
-                <div class="testi-card">
-                <div class="testi-stars">★★★★★</div>
-                <p>"Love the ease and efficiency. Awesome app. Very informative and insightful if wanting to know more about your device. The added breach check is a great bonus."</p>
-                <div class="testi-author">Jennifer Black</div>
-            </div>
-            <div class="testi-card">
-                <div class="testi-stars">★★★★★</div>
-                <p>"This app is good if you need to identify certain vulnerabilities on your iPhone. If you have any issues, their customer service was quite helpful and responsive."</p>
-                <div class="testi-author">Phillip Colligan</div>
-            </div>
-            <div class="testi-card">
-                <div class="testi-stars">★★★★★</div>
-                <p>"Having this app definitely makes me feel more secure. I was hacked before having this on my phone, and knowing it is on my phone now takes away all the worry."</p>
-                <div class="testi-author">Marian Mora</div>
-            </div>
-            <div class="testi-card">
-                <div class="testi-stars">★★★★★</div>
-                <p>"Best malware detection and removal you can find. I've been using this for about a year now and would recommend to anyone. Great additional features as well."</p>
-                <div class="testi-author">Clayton Horn</div>
-            </div>
-            <div class="testi-card">
-                <div class="testi-stars">★★★★★</div>
-                <p>"35 years in Cybersecurity. This App is Safe, Effective, and Extremely Informative. Beginner through Expert Users can benefit greatly from this app."</p>
-                <div class="testi-author">BeaunTeK</div>
-            </div>
 
-            </div>
+                    <div class="testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <p>"Does exactly what it says. Clear to read and understand. This is now the second iPhone we've used it on and would certainly recommend this app."</p>
+                        <div class="testi-author">colinandmandy94</div>
+                    </div>
+                    <div class="testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <p>"Love the ease and efficiency. Awesome app. Very informative and insightful if wanting to know more about your device. The added breach check is a great bonus."</p>
+                        <div class="testi-author">Jennifer Black</div>
+                    </div>
+                    <div class="testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <p>"This app is good if you need to identify certain vulnerabilities on your iPhone. If you have any issues, their customer service was quite helpful and responsive."</p>
+                        <div class="testi-author">Phillip Colligan</div>
+                    </div>
+                    <div class="testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <p>"Having this app definitely makes me feel more secure. I was hacked before having this on my phone, and knowing it is on my phone now takes away all the worry."</p>
+                        <div class="testi-author">Marian Mora</div>
+                    </div>
+                    <div class="testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <p>"Best malware detection and removal you can find. I've been using this for about a year now and would recommend to anyone. Great additional features as well."</p>
+                        <div class="testi-author">Clayton Horn</div>
+                    </div>
+                    <div class="testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <p>"35 years in Cybersecurity. This App is Safe, Effective, and Extremely Informative. Beginner through Expert Users can benefit greatly from this app."</p>
+                        <div class="testi-author">BeaunTeK</div>
+                    </div>
+
+                </div>
             </div>
         </section>
-
+        <!-- ===== TESTIMONIALS END ===== -->
+        <!-- ===== FEATURED IN START ===== -->
         <section id="featured">
             <div class="container">
                 <p class="featured-label">Featured in:</p>
@@ -207,6 +254,8 @@
                 </div>
             </div>
         </section>
+        <!-- ===== FEATURED IN END ===== -->
+        <!-- ===== ABOUT SECTION START ===== -->
         <section id="about">
             <div class="container">
                 <div class="row align-items-center g-5">
@@ -230,27 +279,31 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="about-img-wrap">
-                            <div class="about-img-placeholder">
+                            <img src="assets/images/im2.png" />
                                 <svg width="130" height="130" viewBox="0 0 130 130" fill="none">
                                     <circle cx="65" cy="42" r="26" fill="#d4c5f0" />
                                     <path d="M12 122 Q22 80 65 74 Q108 80 118 122Z" fill="#d4c5f0" />
                                     <rect x="72" y="60" width="26" height="42" rx="5" fill="#1a1535" />
                                     <rect x="75" y="64" width="20" height="32" rx="3" fill="#F5C518" opacity="0.9" />
                                 </svg>
-                                <p>Mobile Security Expert</p>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+       
         <section id="products">
             <div class="container">
                 <h2 class="features-title">
                     Get your freedom back, stop<br />mobile spyware today
                 </h2>
+
                 <div class="features-card">
                     <div class="row g-0">
+
+                        <!-- Row 1 -->
                         <div class="col-lg-4 col-md-6">
                             <div class="feat-cell feat-border-right feat-border-bottom">
                                 <div class="feat-icon-svg">
@@ -264,6 +317,7 @@
                                 <p class="feat-text">Our advanced spyware detection engine can identify if a device contains spyware or bugging software.</p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6">
                             <div class="feat-cell feat-border-right feat-border-bottom">
                                 <div class="feat-icon-svg">
@@ -280,6 +334,7 @@
                                 <p class="feat-text">Find malicious keyboards installed on your device that could allow someone to record things you type (e.g. passwords).</p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6">
                             <div class="feat-cell feat-border-bottom">
                                 <div class="feat-icon-svg">
@@ -293,6 +348,8 @@
                                 <p class="feat-text">Check which apps can access your location, microphone or camera. Get alerted if a known tracking app is installed.</p>
                             </div>
                         </div>
+
+                        <!-- Row 2 -->
                         <div class="col-lg-4 col-md-6">
                             <div class="feat-cell feat-border-right">
                                 <div class="feat-icon-svg">
@@ -308,6 +365,7 @@
                                 <p class="feat-text">Analyse your operating system for signs of tampering that could compromise security, such as Jailbreaking.</p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6">
                             <div class="feat-cell feat-border-right">
                                 <div class="feat-icon-svg">
@@ -321,6 +379,7 @@
                                 <p class="feat-text">Our intelligent scan will either safely remove threats for you or provide easy-to-follow instructions.</p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6">
                             <div class="feat-cell">
                                 <div class="feat-icon-svg">
@@ -335,7 +394,8 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div><!-- /row -->
+                    <!-- CTA buttons inside the white card — bottom -->
                     <div class="features-card-footer">
                         <a href="#" class="btn-yellow">
                             Get Certo for iPhone &nbsp;<i class="bi bi-arrow-right"></i>
@@ -345,9 +405,11 @@
                         </a>
                     </div>
 
-                </div>
+                </div><!-- /features-card -->
             </div>
         </section>
+        <!-- ===== FEATURES SECTION END ===== -->
+        <!-- ===== COMPANY CARDS START ===== -->
         <section id="company">
             <div class="container">
                 <div class="row g-4">
@@ -368,6 +430,24 @@
                 </div>
             </div>
         </section>
+        <!-- ===== COMPANY CARDS END ===== -->
+        <!-- ===== CTA BANNER START ===== -->
+        <section id="cta">
+            <div class="cta-purple-wrap">
+                <div class="container text-center">
+                    <h2 class="cta-title">Is someone spying on your phone?</h2>
+                    <p class="cta-sub">Find out with Certo</p>
+                    <div class="cta-btns">
+                        <a href="#" class="btn-yellow">
+                            Get Certo for iPhone &nbsp;<i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="#" class="btn-cta-white-outline">Get Certo for Android</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== CTA BANNER END ===== -->
+        <!-- ===== BLOG / INSIGHTS START ===== -->
         <section id="blog">
             <div class="container">
                 <h2 class="blog-section-title">Latest insights</h2>
@@ -376,7 +456,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="blog-card">
                             <div class="blog-img-wrap">
-                                <div class="blog-img blog-img--purple"></div>
+                                <img src="assets/images/im3.png" alt="Blog 1" style="width:100%;height:100%;object-fit:cover;" />
                                 <span class="blog-badge badge-dark">Expertise</span>
                             </div>
                             <div class="blog-body">
@@ -390,7 +470,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="blog-card">
                             <div class="blog-img-wrap">
-                                <div class="blog-img blog-img--blue"></div>
+                                <img src="assets/images/im4.png" alt="Blog 1" style="width:100%;height:100%;object-fit:cover;" />
                                 <span class="blog-badge badge-blue">Guides</span>
                             </div>
                             <div class="blog-body">
@@ -404,7 +484,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="blog-card">
                             <div class="blog-img-wrap">
-                                <div class="blog-img blog-img--dark"></div>
+                                <img src="assets/images/im5.png" alt="Blog 1" style="width:100%;height:100%;object-fit:cover;" />
                                 <span class="blog-badge badge-dark">Expertise</span>
                             </div>
                             <div class="blog-body">
@@ -421,7 +501,11 @@
                 </div>
             </div>
         </section>
+        <!-- ===== BLOG / INSIGHTS END ===== -->
+
     </main>
+
+    <!-- ===== FOOTER START ===== -->
     <footer id="footer">
         <div class="container">
             <div class="row g-5 align-items-start">
@@ -440,6 +524,7 @@
                     <p class="footer-copy">Copyright &copy; 2022 Certo Software Limited | Registered in England &amp; Wales No. 10767018</p>
                     <p class="footer-credit">Designed &amp; developed by <a href="#">Bigger Picture</a></p>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
                     <h6 class="footer-brand-head">Certo</h6>
                     <ul class="footer-nav-links">
@@ -450,6 +535,7 @@
                         <li><a href="#blog"><i class="bi bi-dash"></i> Insights</a></li>
                     </ul>
                 </div>
+
                 <div class="col-lg-1 d-none d-lg-block"></div>
 
                 <div class="col-lg-5 col-md-12">
@@ -469,6 +555,8 @@
             </div>
         </div>
     </footer>
+    <!-- ===== FOOTER END ===== -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
