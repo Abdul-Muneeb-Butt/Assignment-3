@@ -434,3 +434,66 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     letter-spacing: -0.3px;
 }
+#testimonials {
+    background: var(--yellow);
+    padding: 0 0 54px;
+}
+
+.testi-scroll-outer {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 40px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.15) transparent;
+}
+
+    .testi-scroll-outer::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .testi-scroll-outer::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.15);
+        border-radius: 4px;
+    }
+
+.testi-scroll-track {
+    display: flex;
+    gap: 18px;
+    width: max-content;
+}
+
+.testi-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 22px 20px;
+    width: 270px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+    .testi-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+    }
+
+.testi-stars {
+    color: var(--yellow);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.testi-card p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+.testi-author {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
