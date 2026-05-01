@@ -1,1 +1,26 @@
-﻿
+﻿:root {
+    --yellow: #F5C518;
+    --yellow-dark: #e0b010;
+    --orange-hero: #e07800; /* exact orange from Image 1 & 2 */
+    --dark: #1a1535;
+    --dark-navy: #0d0b22;
+    --purple-cta: #3730c4;
+    --purple-frame: #4e45d0; /* purple border in hero */
+    --white: #ffffff;
+    --gray-hero: #edeef4; /* light blue-gray for hero left bg */
+    --gray-features: #eef0f8; /* light blue-gray bg for features section — Image 3 */
+    --gray-blog: #f4f4f8;
+    --gray-border: #e4e4ee;
+    --text-dark: #0f0d1e;
+    --text-muted: #6b6b85;
+    --text-white70: rgba(255,255,255,0.7);
+    --font: 'Inter', sans-serif;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+    --shadow-sm: 0 2px 12px rgba(0,0,0,0.07);
+    --shadow-md: 0 8px 32px rgba(0,0,0,0.11);
+    --shadow-lg: 0 24px 64px rgba(0,0,0,0.24);
+    --transition: all 0.25s ease;
+}
