@@ -223,4 +223,33 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f0d1e' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
- 
+#hero {
+    background: var(--white);
+    overflow: hidden;
+}
+
+/* Full-width flex row — no bootstrap container so it bleeds edge to edge */
+.hero-section-wrap {
+    display: flex;
+    min-height: 520px;
+    align-items: stretch;
+}
+
+/* ── LEFT COLUMN: light gray-blue bg, text + buttons ── */
+.hero-left-col {
+    flex: 0 0 44%;
+    background: var(--gray-hero);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px 5% 72px 6%;
+}
+
+.hero-title {
+    font-size: clamp(1.85rem, 3vw, 2.65rem);
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
