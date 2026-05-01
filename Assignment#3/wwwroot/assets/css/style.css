@@ -66,3 +66,24 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.15;
     color: var(--text-dark);
 }
+.btn-yellow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 13px 24px;
+    border-radius: var(--radius-pill);
+    border: none;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+    .btn-yellow:hover {
+        background: var(--yellow-dark);
+        color: var(--text-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(245,197,24,0.45);
+    }
