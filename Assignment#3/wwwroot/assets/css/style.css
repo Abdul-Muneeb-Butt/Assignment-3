@@ -1106,3 +1106,213 @@ h1, h2, h3, h4, h5, h6 {
         color: rgba(255,255,255,0.22);
         line-height: 1.6;
     }
+@media (max-width: 991px) {
+
+    /* Stack hero left/right vertically */
+    .hero-section-wrap {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-left-col {
+        flex: none;
+        padding: 54px 5% 46px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    /* Orange right column stacks below */
+    .hero-right-col {
+        flex: none;
+        min-height: 420px;
+        padding: 30px 20px;
+    }
+
+    /* Purple frame adjusts */
+    .hero-purple-frame {
+        top: 16px;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        border-right: 3.5px solid var(--purple-frame);
+        border-radius: 10px 10px 0 0;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .testi-heading {
+        font-size: 1.5rem;
+    }
+
+    .features-title {
+        font-size: 1.65rem;
+    }
+
+    .cta-title {
+        font-size: 1.7rem;
+    }
+
+    .about-title {
+        font-size: 1.65rem;
+    }
+
+    .feat-border-right {
+        border-right: none;
+    }
+
+    /* Mobile navbar dropdown */
+    .nav-dropdown-box {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        border: none;
+        background: var(--gray-hero);
+        padding: 4px 0 4px 16px;
+        margin-top: 4px;
+    }
+
+    .btn-signin {
+        margin: 12px 0 4px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE ≤575px
+   ============================================================ */
+@media (max-width: 575px) {
+    .hero-left-col {
+        padding: 44px 5% 38px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-desc {
+        font-size: 0.88rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-right-col {
+        min-height: 360px;
+        padding: 20px 12px;
+    }
+
+    .phone-shell {
+        width: 190px;
+    }
+
+    .app-scan-ring {
+        width: 70px;
+        height: 70px;
+    }
+
+    .app-scan-btn {
+        width: 54px;
+        height: 54px;
+        font-size: 0.82rem;
+    }
+
+    .testi-heading {
+        font-size: 1.3rem;
+    }
+
+    .testi-scroll-outer {
+        padding: 10px 16px 20px;
+    }
+
+    .testi-card {
+        width: 240px;
+    }
+
+    .feat-cell {
+        padding: 26px 18px;
+    }
+
+    .feat-border-bottom {
+        border-bottom: 1px solid var(--gray-border);
+    }
+
+    .features-card-footer {
+        padding: 24px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img-wrap {
+        min-height: 260px;
+    }
+
+    .featured-logos-wrap {
+        gap: 16px;
+    }
+
+    .fn-form {
+        flex-direction: column;
+        border-radius: var(--radius-md);
+    }
+
+    .fn-input {
+        padding: 12px 16px;
+    }
+
+    .fn-btn {
+        border-radius: var(--radius-md);
+        margin: 0;
+    }
+
+    .blog-section-title {
+        font-size: 1.5rem;
+    }
+
+    .features-title {
+        font-size: 1.35rem;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — 360px minimum
+   ============================================================ */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.55rem;
+    }
+
+    .phone-shell {
+        width: 170px;
+    }
+
+    .btn-yellow, .btn-outline-pill {
+        font-size: 0.82rem;
+        padding: 11px 18px;
+    }
+}
+ 
