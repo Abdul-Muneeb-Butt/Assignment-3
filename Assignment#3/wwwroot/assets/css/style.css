@@ -810,4 +810,121 @@ h1, h2, h3, h4, h5, h6 {
         background: rgba(255,255,255,0.1);
         transform: translateY(-2px);
     }
+#blog {
+    background: var(--gray-blog);
+    padding: 80px 0;
+}
+
+.blog-section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 36px;
+    letter-spacing: -0.5px;
+}
+
+.blog-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--gray-border);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+.blog-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.blog-card:hover .blog-img {
+    transform: scale(1.04);
+}
+
+.blog-img--purple {
+    background: linear-gradient(135deg, #5b3b9e 0%, #8b6dba 100%);
+}
+
+.blog-img--blue {
+    background: linear-gradient(135deg, #1a5ec8 0%, #3a84e8 100%);
+}
+
+.blog-img--dark {
+    background: linear-gradient(135deg, #1e1e3c 0%, #3c3c6e 100%);
+}
+
+.blog-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.3px;
+    z-index: 2;
+}
+
+.badge-dark {
+    background: rgba(15,13,30,0.70);
+    color: var(--white);
+    backdrop-filter: blur(4px);
+}
+
+.badge-blue {
+    background: rgba(55,48,196,0.85);
+    color: var(--white);
+    backdrop-filter: blur(4px);
+}
+
+.blog-body {
+    padding: 20px 20px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.blog-text {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 14px;
+    flex: 1;
+}
+
+.blog-link {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: var(--transition);
+}
+
+    .blog-link:hover {
+        gap: 8px;
+    }
  
